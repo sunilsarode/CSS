@@ -1,0 +1,30 @@
+.board{
+    height: 516px;
+    width: 516px;
+    border: 0.5px solid black;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    width: 62.5px;
+    height: 62.5px;
+    border: 1px solid black;
+}
+
+.black{
+    background: black;
+}
+
+.white{
+    background: white;
+}
+
+.blue{
+    background: blue;
+}
+
+.gray{
+    background: gray;
+}

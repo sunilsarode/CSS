@@ -1,0 +1,30 @@
+.newCommentDiv{
+
+    display: flex;
+    justify-content: start;
+}
+
+.newComment{
+    margin-top: 10px;
+    width: 300px;
+    height: 15px;
+}
+
+.submitComment{
+    margin-top: 10px;
+    height: 20px;
+}
+
+.inputAndButtonDiv{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.replyButton{
+    color:blue;
+    cursor:pointer;
+   
+}
