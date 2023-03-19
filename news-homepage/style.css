@@ -1,51 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-body{
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
   height: 100%;
   color: white;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
-img{
+img {
   max-width: 100%;
   display: block;
 }
 
-h1{
+h1 {
   color: black;
   font-size: 2.125rem;
+  font-weight: 800;
+  line-height: 1;
 }
-h2{
+h2 {
   font-weight: 700;
   font-size: 1.5rem;
   color: orange;
 }
 
-p{
+p {
   color: #707070;
 }
 
-
-header{
+header {
   padding: 1em 0;
   text-align: center;
 }
 
+.container {
+  max-width: 800px;
 
-.container{
-    
-  width: 90%;
-  max-width: 900px;
-  
   margin: 0 auto;
 }
-.container-flex{
+.container-flex {
   display: flex;
   justify-content: space-between;
 }
 
 /*navigation*/
 
+.header-items {
+  align-items: center;
+}
 nav ul {
   list-style: none;
   padding: 0;
@@ -53,7 +64,7 @@ nav ul {
   justify-content: center;
 }
 
-nav li{
+nav li {
   margin-left: 2em;
 }
 
@@ -61,128 +72,144 @@ nav a {
   text-decoration: none;
   color: #707070;
   font-weight: 300;
-  padding: .25em 0;
+  padding: 0.25em 0;
 }
 
-main{
+main {
   width: 70%;
   /* border: 1px solid black; */
 }
 
-.news{
-  margin: 0;
+.news {
+  /* margin: 0; */
+  display: flex;
+  margin-top: 2rem;
 }
-.main-news{
-  width: 30%;
-}
-.read-more{
-  width: 42%;
- 
-  /* border: 1px solid black; */
-}
-
-.read-more-button{
-width: 60%;
-height: 20%;
-text-align: center;
-letter-spacing: .4em;
-align-items: center;
-display: flex;
-justify-content: center;
-color: white;
-background-color: tomato;
-font-weight: 700;
-}
-
-aside{
-  width: 22%;
-  background: black;
-  padding: 0 2em;
-}
-
-.new-stories{
+.read-more {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+  /* margin-left: 2rem; */
+  width: 49%;
+  /* border: 1px solid black; */
 }
 
-.story{
+.read-more-button {
+  width: 50%;
+  height: 35%;
+  text-align: center;
+  letter-spacing: 0.4em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: tomato;
+  font-weight: 700;
+}
+
+aside {
+  width: 28%;
+  background: black;
+  padding: 2em;
+}
+
+.new-stories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.story {
   border-bottom: 1px solid #707070;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
 }
-
+.story:last-child {
+  border-bottom: none;
+}
 
 /*bottom part*/
 
-h4{
- font-size: 2rem;
- color: gray; 
- padding: 0;
- margin:0;
+h4 {
+  font-size: 1.4rem;
+  color: gray;
 }
-h5{
-  font-size: 1rem;
+h5 {
+  font-size: 0.755rem;
   color: black;
-  margin: 0 auto;
 }
 
-.trending-news{
+.main-news{
+  width: 45%;
+}
 
+.trending-news {
+  width: 28%;
+
+  display: flex;
+
+  width: 28%;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.trending-news-image {
+  /* width: 36%;
+  height: 80%; */
+  /* border: 1px solid black; */
+}
+.trending-news-text {
   /* border: 1px solid black; */
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 27%;
-  
-}
-.trending-news-image{
-  width: 36%;
-  height: 80%;
-  
-}
-.trending-news-text{
-  width: 60%;
-  height: 80%;
-  /* border: 1px solid black; */
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.mobile{
+.mobile {
   display: none;
 }
 
-@media (max-width:650px) {
-  .container-flex{
-    flex-direction:column;
+@media (max-width: 650px) {
+  .container-flex {
+    flex-direction: column;
     margin-bottom: 1em;
+    min-width: 300px;
   }
 
-  main{
+  main {
     width: 100%;
   }
 
-  aside{
+  aside {
     width: 100%;
+  }
 
+  .news{
+    gap:1rem;
   }
   .main-news{
     width: 100%;
   }
-  .read-more{
+  .read-more {
     width: 100%;
+    gap:1rem;
+    height: 100px;
   }
-  .trending-news{
+  .trending-news {
     width: 100%;
     padding: 1em;
   }
-  nav{
+  .trending-news-text{
+    gap: 2rem;
+  }
+  nav {
     display: none;
   }
-  .mobile{
-      display: block;
+  .mobile {
+    display: block;
   }
-  .desktop{
+  .desktop {
     display: none;
   }
 }
