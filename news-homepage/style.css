@@ -55,7 +55,10 @@ header {
 /*navigation*/
 
 .header-items {
-  align-items: center;
+  /* align-items: center; */
+}
+.menu-icon{
+  display: none;
 }
 nav ul {
   list-style: none;
@@ -73,6 +76,9 @@ nav a {
   color: #707070;
   font-weight: 300;
   padding: 0.25em 0;
+}
+nav a:hover{
+  color: tomato;
 }
 
 main {
@@ -105,8 +111,11 @@ main {
   color: white;
   background-color: tomato;
   font-weight: 700;
+  cursor: pointer;
 }
-
+.read-more-button:hover{
+  background-color: #000;
+}
 aside {
   width: 28%;
   background: black;
@@ -139,6 +148,10 @@ h4 {
 h5 {
   font-size: 0.755rem;
   color: black;
+  cursor: pointer;
+}
+h5:hover{
+  color: tomato;
 }
 
 .main-news{
@@ -155,19 +168,49 @@ h5 {
   margin-top: 1rem;
 }
 .trending-news-image {
-  /* width: 36%;
-  height: 80%; */
-  /* border: 1px solid black; */
+   width: 35%;
 }
 .trending-news-text {
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 60%;
 }
 
 .mobile {
   display: none;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #FFF;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidepanel a {
+  padding: 0.5em;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #000;
+}
+
+.sidepanel .closebtn {
+ display: flex;
+ flex-direction: row-reverse;
+ padding: 1rem;
 }
 
 @media (max-width: 650px) {
@@ -175,6 +218,7 @@ h5 {
     flex-direction: column;
     margin-bottom: 1em;
     min-width: 300px;
+    padding: 1rem;
   }
 
   main {
@@ -198,7 +242,6 @@ h5 {
   }
   .trending-news {
     width: 100%;
-    padding: 1em;
   }
   .trending-news-text{
     gap: 2rem;
@@ -212,4 +255,16 @@ h5 {
   .desktop {
     display: none;
   }
+  .header-items {
+    display: flex;
+    flex-direction: row;
+  }
+  .menu-icon{
+    /* align-items: end; */
+    display: flex;
+    padding:1rem;
+  }
+  .trending-news-image {
+    min-width: 40%;
+ }
 }
